@@ -1,0 +1,44 @@
+@import "styles/breakpoints";
+
+.home {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+
+  &__navbar {
+    flex: 1;
+
+    @media only screen and (min-width: $big) {
+      display: block;
+      flex: 0.3;
+    }
+
+    &--hidden {
+      display: none;
+
+      @media only screen and (min-width: $big) {
+        display: block;
+      }
+    }
+  }
+
+  &__header {
+    display: none;
+    height: 100vh;
+
+    &--show {
+      display: block;
+      flex: 1;
+
+      @media only screen and (min-width: $big) {
+        flex: 0.7;
+      }
+    }
+
+    @media only screen and (min-width: $big) {
+      display: block;
+      flex: 1;
+    }
+  }
+}

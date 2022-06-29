@@ -1,0 +1,10 @@
+.messages-list {
+  padding: 20px 30px;
+  height: calc(92vh - 107px);
+
+  &__content {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

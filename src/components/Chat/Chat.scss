@@ -1,0 +1,112 @@
+@import "styles/mixin";
+@import "styles/colors";
+@import "styles/breakpoints";
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  height: 100vh;
+  border-left: 1px solid $secondary;
+
+  &__header {
+    border-left: 1px solid $secondary;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    padding: 0 2vh;
+    background-color: $primary;
+    color: white;
+  }
+
+  &__header-back {
+    cursor: pointer;
+    border: 1px solid $secondary;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 10px;
+
+    @media only screen and (min-width: $big) {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__header-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid $secondary;
+
+    @media only screen and (min-width: $big) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &__header-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  &__header-title {
+    font-size: 16px;
+    font-weight: 700;
+
+    @media only screen and (min-width: $big) {
+      font-size: 24px;
+    }
+  }
+
+  &__header-last-message {
+    font-size: 12px;
+
+    @media only screen and (min-width: $big) {
+      font-size: 16px;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $secondary;
+    background-color: $primary;
+    padding: 15px 30px;
+  }
+
+  &__input {
+    @include input;
+    height: 36px;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
+
+  &__input-icon {
+    cursor: pointer;
+    border: 1px solid $secondary;
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+
+    &--disabled {
+      pointer-events: none;
+      cursor: none;
+    }
+  }
+
+  &__input-button {
+    all: unset;
+  }
+}

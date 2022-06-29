@@ -1,0 +1,35 @@
+@import "styles/colors";
+
+.chat-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $primary;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid $secondary;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__last-message {
+    font-size: 16px;
+  }
+}

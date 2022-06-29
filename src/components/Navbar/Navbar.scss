@@ -1,0 +1,45 @@
+@import "styles/mixin";
+@import "styles/colors";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__content {
+    padding: 0 15px;
+  }
+
+  &__input {
+    @include input;
+    border-radius: 10px;
+    height: 40px;
+  }
+
+  &__button {
+    @include button--primary;
+    width: 100%;
+  }
+
+  &__chats-list {
+    overflow-y: auto;
+    height: 70vh;
+
+    &--empty {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__modal-avatar {
+    margin: 10px auto;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+  }
+}

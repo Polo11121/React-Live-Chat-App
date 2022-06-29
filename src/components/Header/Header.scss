@@ -1,0 +1,37 @@
+@import "styles/colors";
+@import "styles/breakpoints";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  padding: 0 5vh;
+  background-color: $primary;
+
+  @media only screen and (min-width: $big) {
+    flex-direction: row-reverse;
+  }
+
+  &__logo {
+    height: 80%;
+    object-fit: contain;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    font-size: 12px;
+  }
+
+  &__avatar {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+}

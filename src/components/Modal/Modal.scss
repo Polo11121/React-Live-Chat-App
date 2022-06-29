@@ -1,0 +1,65 @@
+@import "styles/mixin";
+@import "styles/colors";
+@import "styles/breakpoints";
+
+.modal {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 8vw 8vh;
+    width: 60vw;
+    background-color: white;
+    border: 3px solid $primary;
+
+    @media only screen and (min-width: $big) {
+      padding: 10vh 10vw;
+      width: 15vw;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $primary;
+    font-size: 16px;
+    font-weight: 700;
+
+    @media only screen and (min-width: $big) {
+      font-size: 32px;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+  }
+
+  &__button {
+    @include button;
+    flex: 1;
+    margin: 10px 0;
+    height: 35px;
+    font-size: 12px;
+
+    @media only screen and (min-width: $small) {
+      margin: 0 10px;
+      height: 40px;
+    }
+
+    &--primary {
+      background: $primary;
+      color: #fff;
+    }
+
+    &--secondary {
+      color: $primary;
+    }
+
+    &--disabled {
+      @include button--disabled;
+    }
+  }
+}
